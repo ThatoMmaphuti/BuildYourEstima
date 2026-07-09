@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BYE | Register</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:30px;
+}
+
+.container{
+    width:1000px;
+    background:white;
+    display:flex;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.left{
+
+    width:45%;
+    background:linear-gradient(135deg,#4A00E0,#8E2DE2);
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    padding:40px;
+}
+
+.left h1{
+    font-size:45px;
+    margin-bottom:20px;
+}
+
+.left p{
+    text-align:center;
+    line-height:1.8;
+}
+
+.right{
+
+    width:55%;
+    padding:40px;
+}
+
+.right h2{
+    margin-bottom:25px;
+    color:#333;
+}
+
+.row{
+    display:flex;
+    gap:15px;
+}
+
+.input-group{
+
+    margin-bottom:18px;
+    flex:1;
+}
+
+label{
+    display:block;
+    margin-bottom:8px;
+}
+
+input,
+select{
+
+    width:100%;
+    padding:13px;
+    border:1px solid #ddd;
+    border-radius:8px;
+}
+
+input:focus,
+select:focus{
+
+    outline:none;
+    border:1px solid #8E2DE2;
+}
+
+button{
+
+    width:100%;
+    padding:15px;
+    border:none;
+    background:#6C2BD9;
+    color:white;
+    border-radius:8px;
+    font-size:17px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+
+    background:#4A00E0;
+}
+
+.bottom{
+
+    text-align:center;
+    margin-top:20px;
+}
+
+.bottom a{
+
+    text-decoration:none;
+    color:#6C2BD9;
+    font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="left">
+
+<h1>BYE</h1>
+
+<h3>Build Your Estima</h3>
+
+<br>
+
+<p>
+
+Share your journey.
+Help others grow.
+Learn from real experiences.
+
+</p>
+
+</div>
+
+<div class="right">
+
+<h2>Create Account</h2>
+
+<form>
+
+<div class="row">
+
+<div class="input-group">
+<label>First Name</label>
+<input type="text">
+</div>
+
+<div class="input-group">
+<label>Last Name</label>
+<input type="text">
+</div>
+
+</div>
+
+<div class="input-group">
+<label>Email</label>
+<input type="email">
+</div>
+
+<div class="row">
+
+<div class="input-group">
+<label>Password</label>
+<input type="password">
+</div>
+
+<div class="input-group">
+<label>Confirm Password</label>
+<input type="password">
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="input-group">
+
+<label>Role</label>
+
+<select>
+
+<option>Seeker</option>
+
+<option>Listener</option>
+
+</select>
+
+</div>
+
+<div class="input-group">
+
+<label>Age</label>
+
+<input type="number">
+
+</div>
+
+</div>
+
+<div class="input-group">
+
+<label>Province</label>
+
+<input type="text">
+
+</div>
+
+<button>Create Account</button>
+
+<div class="bottom">
+
+Already have an account?
+
+<a href="login.html">Login</a>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+</body>
+</html>
