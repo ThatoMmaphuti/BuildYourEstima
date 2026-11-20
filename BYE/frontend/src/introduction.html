@@ -1,0 +1,516 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BYE | Introduction</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #f8f6fc;
+    color: #333;
+}
+
+/* Navigation */
+nav {
+    background: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo {
+    color: #6c2bd9;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+nav a {
+    color: #6c2bd9;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 55px 20px 30px;
+}
+
+.header h1 {
+    color: #54218a;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.header p {
+    color: #777;
+    line-height: 1.7;
+    max-width: 650px;
+    margin: auto;
+}
+
+/* Main form */
+.container {
+    max-width: 850px;
+    margin: 20px auto 60px;
+    padding: 20px;
+}
+
+.section {
+    background: white;
+    padding: 35px;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.section h2 {
+    color: #54218a;
+    margin-bottom: 12px;
+}
+
+.section-description {
+    color: #888;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* Inputs */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 9px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 9px;
+    font-size: 15px;
+    outline: none;
+}
+
+input:focus, textarea:focus {
+    border-color: #8e2de2;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.optional {
+    color: #999;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+/* Emotion bubbles */
+.emotion-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+    margin-top: 20px;
+}
+
+.emotion {
+    padding: 13px 20px;
+    border: 2px solid #e5d8f5;
+    border-radius: 30px;
+    background: #fff;
+    color: #65418b;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.emotion:hover {
+    background: #f3eaff;
+    transform: translateY(-3px);
+}
+
+.emotion.selected {
+    background: #6c2bd9;
+    color: white;
+    border-color: #6c2bd9;
+}
+
+.emotion-hint {
+    color: #888;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+/* Story */
+textarea {
+    min-height: 200px;
+    resize: vertical;
+    line-height: 1.7;
+}
+
+.story-prompts {
+    background: #f7f1ff;
+    padding: 18px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: #65418b;
+    line-height: 1.9;
+    font-size: 14px;
+}
+
+/* Privacy */
+.privacy {
+    background: #f5f0fb;
+    padding: 16px;
+    border-radius: 10px;
+    color: #765e8e;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-top: 20px;
+}
+
+/* Buttons */
+.submit-area {
+    text-align: center;
+    padding: 20px;
+}
+
+.submit-btn {
+    background: #6c2bd9;
+    color: white;
+    border: none;
+    padding: 16px 45px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #4a00e0;
+    transform: translateY(-3px);
+}
+
+.message {
+    display: none;
+    background: #eee5fa;
+    padding: 18px;
+    border-radius: 10px;
+    margin-top: 20px;
+    color: #54218a;
+    line-height: 1.6;
+}
+
+footer {
+    text-align: center;
+    background: white;
+    padding: 22px;
+    color: #999;
+    font-size: 13px;
+}
+
+@media(max-width: 600px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 23px;
+    }
+
+    .header h1 {
+        font-size: 28px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">BYE.</div>
+    <a href="instructions.html">Back</a>
+</nav>
+
+<header class="header">
+    <h1>Let's Get to Know You 💜</h1>
+
+    <p>
+        Before we begin your journey, we'd love to know
+        a little about you. This is your space.
+        Take your time and be yourself.
+    </p>
+</header>
+
+<main class="container">
+
+<form id="introductionForm">
+
+    <!-- SECTION 1 -->
+    <section class="section">
+
+        <h2>01. A Little About You</h2>
+
+        <p class="section-description">
+            Everyone has a story. Let's start by
+            getting to know the person behind it.
+        </p>
+
+        <div class="form-grid">
+
+            <div class="input-group full-width">
+                <label>Full Name</label>
+                <input type="text"
+                       placeholder="Enter your full name"
+                       required>
+            </div>
+
+            <div class="input-group">
+                <label>Age</label>
+                <input type="number"
+                       placeholder="Your age"
+                       min="1"
+                       max="120"
+                       required>
+            </div>
+
+            <div class="input-group">
+                <label>Location</label>
+                <input type="text"
+                       placeholder="Town / City and Province"
+                       required>
+            </div>
+
+            <div class="input-group full-width">
+                <label>What are your hobbies and interests?</label>
+                <input type="text"
+                       placeholder="e.g. Music, sports, reading, travelling...">
+            </div>
+
+            <div class="input-group">
+                <label>Who is your favourite person?</label>
+                <input type="text"
+                       placeholder="Someone special to you">
+            </div>
+
+            <div class="input-group">
+                <label>
+                    Who is the person you trust most?
+                    <span class="optional">(Optional)</span>
+                </label>
+                <input type="text"
+                       placeholder="You can leave this blank">
+            </div>
+
+        </div>
+
+        <div class="privacy">
+            🔒 Your personal information should be kept private.
+            Only share information you feel comfortable providing.
+            You do not need to give us anyone else's contact details.
+        </div>
+
+    </section>
+
+    <!-- SECTION 2 -->
+    <section class="section">
+
+        <h2>02. How Are You Feeling Right Now?</h2>
+
+        <p class="section-description">
+            Feelings can be complicated. Sometimes we feel
+            more than one emotion at a time. Choose all the
+            emotions that describe how you're feeling today.
+        </p>
+
+        <div class="emotion-container">
+
+            <button type="button" class="emotion">😊 Happy</button>
+
+            <button type="button" class="emotion">😢 Sad</button>
+
+            <button type="button" class="emotion">😤 Frustrated</button>
+
+            <button type="button" class="emotion">😠 Angry</button>
+
+            <button type="button" class="emotion">😟 Anxious</button>
+
+            <button type="button" class="emotion">😵 Overwhelmed</button>
+
+            <button type="button" class="emotion">🥺 Lonely</button>
+
+            <button type="button" class="emotion">😕 Confused</button>
+
+            <button type="button" class="emotion">🌱 Hopeful</button>
+
+            <button type="button" class="emotion">🤩 Excited</button>
+
+            <button type="button" class="emotion">😶 Numb</button>
+
+            <button type="button" class="emotion">😌 Peaceful</button>
+
+            <button type="button" class="emotion">😔 Disappointed</button>
+
+            <button type="button" class="emotion">😰 Scared</button>
+
+            <button type="button" class="emotion">🥰 Loved</button>
+
+        </div>
+
+        <input type="hidden" id="selectedEmotions"
+               name="emotions">
+
+        <p class="emotion-hint">
+            You can select more than one emotion.
+            There are no right or wrong answers.
+        </p>
+
+    </section>
+
+    <!-- SECTION 3 -->
+    <section class="section">
+
+        <h2>03. Your Story Matters</h2>
+
+        <p class="section-description">
+            Now that we've gotten to know you a little,
+            we'd like to understand what brought you here.
+        </p>
+
+        <div class="story-prompts">
+
+            You can start by thinking about:
+
+            <ul>
+                <li>What has been happening in your life?</li>
+                <li>What has been bothering you?</li>
+                <li>How long have you been experiencing this?</li>
+                <li>How has it affected your everyday life?</li>
+                <li>What would you like to change?</li>
+            </ul>
+
+        </div>
+
+        <div class="input-group">
+
+            <label>Tell us what you've been going through.</label>
+
+            <textarea
+                name="story"
+                placeholder="Take a deep breath. There's no rush. Write as much or as little as you feel comfortable sharing..."
+            ></textarea>
+
+        </div>
+
+        <div class="privacy">
+            💜 This is your story. You are not required to share
+            anything you're uncomfortable discussing. Avoid including
+            passwords, addresses or other identifying information.
+            You can also choose to talk about it with a Listener instead.
+        </div>
+
+    </section>
+
+    <!-- SUBMIT -->
+    <div class="submit-area">
+
+        <button type="submit" class="submit-btn">
+            Continue My Journey →
+        </button>
+
+        <div class="message" id="successMessage">
+            <h3>Thank you for sharing! 💜</h3>
+            <p>
+                You've taken an important first step.
+                Your journey with BYE is just beginning.
+            </p>
+            <p>
+                Your answers are currently only part of this
+                page demonstration and have not been saved.
+            </p>
+        </div>
+
+    </div>
+
+</form>
+
+</main>
+
+<footer>
+    Not new, but better. <br><br>
+    &copy; 2026 Build Your Estima (BYE).
+</footer>
+
+<script>
+
+// Select multiple emotions
+const emotions = document.querySelectorAll(".emotion");
+
+const selectedEmotions =
+    document.getElementById("selectedEmotions");
+
+emotions.forEach(emotion => {
+
+    emotion.addEventListener("click", function() {
+
+        this.classList.toggle("selected");
+
+        this.setAttribute(
+            "aria-pressed",
+            this.classList.contains("selected")
+        );
+
+        const selected = [];
+
+        document.querySelectorAll(".emotion.selected")
+            .forEach(item => {
+                selected.push(item.textContent.trim());
+            });
+
+        selectedEmotions.value = selected.join(", ");
+
+    });
+
+});
+
+// Form submission
+const form = document.getElementById("introductionForm");
+
+form.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    document.getElementById("successMessage").style.display = "block";
+
+    document.getElementById("successMessage")
+        .scrollIntoView({ behavior: "smooth" });
+
+});
+
+</script>
+
+</body>
+</html>

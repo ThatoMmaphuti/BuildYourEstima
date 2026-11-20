@@ -1,0 +1,325 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BYE | Find Your Listener</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f7f3ff;
+            color: #333;
+            padding: 30px 15px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 850px;
+            margin: 0 auto 30px;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #6c2bd9;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #6c2bd9;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 750px;
+            margin: auto;
+            background: white;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+        }
+
+        .heading {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .heading h1 {
+            color: #6c2bd9;
+            margin-bottom: 10px;
+        }
+
+        .heading p {
+            color: #777;
+            line-height: 1.6;
+        }
+
+        .section {
+            margin-bottom: 28px;
+        }
+
+        .section h3 {
+            color: #4a148c;
+            margin-bottom: 12px;
+        }
+
+        .section p {
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .option {
+            border: 1px solid #d8c8f5;
+            background: #faf8ff;
+            padding: 10px 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            color: #555;
+            transition: 0.2s;
+        }
+
+        .option:hover {
+            border-color: #6c2bd9;
+        }
+
+        .option.selected {
+            background: #6c2bd9;
+            color: white;
+            border-color: #6c2bd9;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #d8c8f5;
+            border-radius: 10px;
+            outline: none;
+            resize: vertical;
+            min-height: 90px;
+            font-size: 14px;
+        }
+
+        textarea:focus {
+            border-color: #6c2bd9;
+        }
+
+        .submit-area {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        /* Smaller button */
+        .submit-btn {
+            background: linear-gradient(135deg, #8e2de2, #6c2bd9);
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 12px rgba(108,43,217,0.25);
+        }
+
+        .message {
+            display: none;
+            text-align: center;
+            color: #6c2bd9;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .privacy {
+            text-align: center;
+            color: #888;
+            font-size: 12px;
+            margin-top: 20px;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 22px;
+            }
+
+            .options {
+                gap: 8px;
+            }
+
+            .option {
+                padding: 9px 12px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">BYE 💜</div>
+        <a href="introduction.html">← Back</a>
+    </nav>
+
+    <div class="container">
+
+        <div class="heading">
+            <h1>Find Your Listener 💜</h1>
+            <p>
+                Everyone deserves someone who understands.
+                Tell us what kind of person you would feel
+                comfortable sharing your journey with.
+            </p>
+        </div>
+
+        <form id="listenerForm">
+
+            <!-- AGE RANGE -->
+            <div class="section">
+                <h3>01. What age range would you prefer?</h3>
+                <p>Select the age group you would feel comfortable with.</p>
+
+                <div class="options" data-group="age">
+                    <button type="button" class="option">18–25</button>
+                    <button type="button" class="option">26–35</button>
+                    <button type="button" class="option">36–45</button>
+                    <button type="button" class="option">46–55</button>
+                    <button type="button" class="option">56+</button>
+                    <button type="button" class="option">No preference</button>
+                </div>
+            </div>
+
+            <!-- GENDER -->
+            <div class="section">
+                <h3>02. Do you have a preferred gender?</h3>
+
+                <div class="options" data-group="gender">
+                    <button type="button" class="option">Male</button>
+                    <button type="button" class="option">Female</button>
+                    <button type="button" class="option">Non-binary</button>
+                    <button type="button" class="option">No preference</button>
+                </div>
+            </div>
+
+            <!-- PERSONALITY -->
+            <div class="section">
+                <h3>03. What kind of person would you like to talk to?</h3>
+                <p>You can select more than one.</p>
+
+                <div class="options" data-group="traits" data-multiple="true">
+                    <button type="button" class="option">Patient and understanding</button>
+                    <button type="button" class="option">A good listener</button>
+                    <button type="button" class="option">Motivating and positive</button>
+                    <button type="button" class="option">Calm and gentle</button>
+                    <button type="button" class="option">Honest and straightforward</button>
+                    <button type="button" class="option">Someone with similar experiences</button>
+                </div>
+            </div>
+
+            <!-- SHARED EXPERIENCES -->
+            <div class="section">
+                <h3>04. What experiences would you like your Listener to understand?</h3>
+                <p>
+                    For example: family challenges, relationships,
+                    school pressure, confidence or personal growth.
+                </p>
+
+                <textarea id="experiences"
+                    placeholder="Tell us about the experiences you would like your Listener to understand..."></textarea>
+            </div>
+
+            <!-- EXTRA INFORMATION -->
+            <div class="section">
+                <h3>05. Anything else you would like us to know?</h3>
+
+                <textarea id="extra"
+                    placeholder="Describe your ideal Listener..."></textarea>
+            </div>
+
+            <div class="submit-area">
+                <button type="submit" class="submit-btn">
+                    Find My Listener →
+                </button>
+            </div>
+
+            <p class="privacy">
+                Your comfort matters. Only share information you feel
+                comfortable providing. Your preferences are not guarantees
+                of a match.
+            </p>
+
+            <p class="message" id="successMessage">
+                Your preferences have been captured! 💜
+            </p>
+
+        </form>
+    </div>
+
+    <script>
+        // Handle option selection
+        document.querySelectorAll(".options").forEach(group => {
+
+            group.querySelectorAll(".option").forEach(button => {
+
+                button.addEventListener("click", function () {
+
+                    if (group.dataset.multiple === "true") {
+                        this.classList.toggle("selected");
+                    } else {
+                        group.querySelectorAll(".option").forEach(option => {
+                            option.classList.remove("selected");
+                        });
+
+                        this.classList.add("selected");
+                    }
+
+                });
+
+            });
+
+        });
+
+        // Handle form submission
+        document.getElementById("listenerForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const age = document.querySelector('[data-group="age"] .selected');
+            const gender = document.querySelector('[data-group="gender"] .selected');
+
+            if (!age || !gender) {
+                alert("Please select your preferred age range and gender.");
+                return;
+            }
+
+            document.getElementById("successMessage").style.display = "block";
+        });
+    </script>
+
+</body>
+</html>

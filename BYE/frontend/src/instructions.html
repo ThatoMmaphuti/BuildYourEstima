@@ -1,0 +1,387 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BYE | Your Journey</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #f8f6fc;
+            color: #333;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 22px 8%;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            font-size: 27px;
+            font-weight: bold;
+            color: #6c2bd9;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #555;
+            font-weight: bold;
+        }
+
+        /* Introduction */
+        .intro {
+            text-align: center;
+            padding: 55px 20px 35px;
+        }
+
+        .intro h1 {
+            font-size: 38px;
+            color: #51218a;
+            margin-bottom: 15px;
+        }
+
+        .intro p {
+            max-width: 650px;
+            margin: auto;
+            color: #777;
+            line-height: 1.7;
+        }
+
+        /* Journey */
+        .journey {
+            max-width: 1050px;
+            margin: 35px auto 70px;
+            padding: 20px;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 35px;
+            justify-items: center;
+        }
+
+        .bubble {
+            width: 235px;
+            min-height: 235px;
+            border-radius: 50%;
+            background: white;
+            border: 3px solid #d8c1f5;
+            box-shadow: 0 8px 22px rgba(108,43,217,0.10);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 28px;
+            transition: 0.3s;
+        }
+
+        .bubble:hover {
+            transform: translateY(-8px);
+            border-color: #8e2de2;
+            box-shadow: 0 12px 25px rgba(108,43,217,0.18);
+        }
+
+        .number {
+            background: #6c2bd9;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 12px;
+            font-weight: bold;
+        }
+
+        .bubble h3 {
+            color: #54218a;
+            font-size: 17px;
+            margin-bottom: 10px;
+        }
+
+        .bubble p {
+            font-size: 12px;
+            line-height: 1.6;
+            color: #777;
+        }
+
+
+/* Join BYE section */
+
+.join-section {
+    text-align: center;
+    padding: 65px 20px;
+    background: white;
+}
+
+.join-section h2 {
+    color: #54218a;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.join-section p {
+    color: #777;
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+.join-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.join-buttons a {
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.yes-btn {
+    background: #6c2bd9;
+    color: white;
+}
+
+.yes-btn:hover {
+    background: #4a00e0;
+    transform: translateY(-4px);
+}
+
+.no-btn {
+    border: 2px solid #6c2bd9;
+    color: #6c2bd9;
+}
+
+.no-btn:hover {
+    background: #eee5fa;
+    transform: translateY(-4px);
+}
+
+        /* Final stage */
+        .final {
+            background: #6c2bd9;
+            border-color: #6c2bd9;
+        }
+
+        .final h3,
+        .final p {
+            color: white;
+        }
+
+        .final .number {
+            background: white;
+            color: #6c2bd9;
+        }
+
+        /* Motto */
+        .motto {
+            background: #eee5fa;
+            text-align: center;
+            padding: 55px 20px;
+        }
+
+        .motto h2 {
+            font-size: 32px;
+            color: #54218a;
+            margin-bottom: 12px;
+        }
+
+        .motto p {
+            color: #76638b;
+        }
+
+        footer {
+            background: #fff;
+            padding: 20px;
+            text-align: center;
+            color: #888;
+            font-size: 13px;
+        }
+
+        /* Mobile */
+        @media(max-width: 800px) {
+            .steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .bubble {
+                width: 210px;
+                min-height: 210px;
+            }
+        }
+
+        @media(max-width: 520px) {
+            .steps {
+                grid-template-columns: 1fr;
+            }
+
+            .intro h1 {
+                font-size: 29px;
+            }
+
+            nav {
+                padding: 20px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">BYE.</div>
+        <a href="login.html">Login</a>
+    </nav>
+
+    <section class="intro">
+
+        <h1>Your Journey with BYE</h1>
+
+        <p>
+            Everyone's journey is different, but you don't have
+            to figure everything out alone. Here's what you can
+            expect when you become part of our community.
+        </p>
+
+    </section>
+
+    <section class="journey">
+
+        <div class="steps">
+
+            <div class="bubble">
+                <div class="number">1</div>
+                <h3>Introduction</h3>
+                <p>
+                    Welcome to BYE! Get to know our platform
+                    and discover how we help people grow
+                    through shared experiences.
+                </p>
+            </div>
+
+            <div class="bubble">
+                <div class="number">2</div>
+                <h3>Helper Locator</h3>
+                <p>
+                    Find a Listener who understands your
+                    situation and has experience with
+                    challenges similar to yours.
+                </p>
+            </div>
+
+            <div class="bubble">
+                <div class="number">3</div>
+                <h3>Conversation and Support</h3>
+                <p>
+                    Open up, share your experiences and
+                    receive guidance from someone
+                    who has been there.
+                </p>
+            </div>
+
+            <div class="bubble">
+                <div class="number">4</div>
+                <h3>Review</h3>
+                <p>
+                    Reflect on your experience, share
+                    your feedback and help us make
+                    the community better.
+                </p>
+            </div>
+
+            <div class="bubble">
+                <div class="number">5</div>
+                <h3>Task Assigned and Completion</h3>
+                <p>
+                    Work towards practical goals and
+                    complete activities agreed upon
+                    with your Listener.
+                </p>
+            </div>
+
+            <div class="bubble">
+                <div class="number">6</div>
+                <h3>The Real World After This</h3>
+                <p>
+                    Take what you've learned and
+                    apply it to your everyday life.
+                    Your growth continues beyond BYE.
+                </p>
+            </div>
+
+            <div class="bubble final">
+                <div class="number">7</div>
+                <h3>Bye Bye, TRAUMA!</h3>
+                <p>
+                    Celebrate your progress.
+                    Remember, healing takes time,
+                    and every step forward matters.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="motto">
+
+        <h2>Not new, but better.</h2>
+
+        <p>
+            Different experiences. Shared understanding.
+            Better tomorrows.
+        </p>
+
+    </section>
+
+
+<section class="join-section">
+
+    <h2>So, are you in?</h2>
+
+    <p>
+        Every journey starts with a decision.
+        Are you ready to take your first step with BYE?
+    </p>
+
+    <div class="join-buttons">
+
+        <a href="introduction.html" class="yes-btn">
+            YES, I'M IN!
+        </a>
+
+        <a href="logout.html" class="no-btn">
+            NO, NOT NOW
+        </a>
+
+    </div>
+
+</section>
+
+    <footer>
+        &copy; 2026 Build Your Estima (BYE). All rights reserved.
+    </footer>
+
+</body>
+</html>
